@@ -609,7 +609,7 @@ function checkSatelliteConfig {
     ## Subnets
     echo
     echo " + Subnets"
-    hammer --csv --csv-separator=" " subnet list| sort -n | grep -v "Id " > $TMPDIR/subnets
+    hammer --csv --csv-separator=" " subnet list| sort -n | grep -v "ID " > $TMPDIR/subnets
     while read line
     do
       id=$(echo $line | awk '{print $1}')
