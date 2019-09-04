@@ -572,7 +572,7 @@ function checkSatelliteConfig {
 
     ## Capsules
     echo
-    hammer --csv --csv-separator=" " capsule list| sort -n | grep -v "Id " > $TMPDIR/capsules
+    hammer --csv --csv-separator=" " capsule list| sort -n | grep -v "ID " > $TMPDIR/capsules
     totalCapsules=$(wc -l $TMPDIR/capsules | awk '{print $1}')
     echo " + $totalCapsules Capsule(s) found"
     while read line
