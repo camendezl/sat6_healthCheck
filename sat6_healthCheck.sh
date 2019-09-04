@@ -88,7 +88,7 @@ function am_I_root {
 }
 
 function check_hiera_symlink {
-  if [ $(rpm -q hiera | wc -l) -gt 0 ]
+  if [ $(rpm -q hiera > /dev/null ; echo $?) -eq 0 ]
     then 
     echo -e "hiera has been installed"
     if [ ! -L /etc/puppet/hiera.yaml ]
