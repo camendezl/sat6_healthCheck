@@ -550,7 +550,7 @@ function checkSatelliteConfig {
 
     ## Location List
     echo
-    hammer --csv --csv-separator=" " location list | sort -n | grep -v "Id " > $TMPDIR/locations
+    hammer --csv --csv-separator=" " location list | sort -n | grep -v "ID " > $TMPDIR/locations
     totalLocations=$(wc -l $TMPDIR/locations | awk '{print $1}')
     echo " + $totalLocations Locations found"
     while read line
